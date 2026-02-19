@@ -2,6 +2,8 @@
 
 Very simple test of Claude's ability to write python scripts.
 
+**GitHub**: https://github.com/stevenmburns/test1
+
 ## Tech Stack
 
 <!-- List primary languages, frameworks, libraries, and tools -->
