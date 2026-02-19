@@ -83,6 +83,27 @@ VAR_NAME=     # Description
 
 <!-- Things that are non-obvious or have caused confusion before -->
 
+### SSH Key Setup (no passphrase)
+SSH key `~/.ssh/id_ed25519_github` is configured for passwordless GitHub access.
+
+```bash
+# Generate key (one-time setup)
+ssh-keygen -t ed25519 -C "stevenmburns@github" -f ~/.ssh/id_ed25519_github -N ""
+
+# Add public key to GitHub
+gh ssh-key add ~/.ssh/id_ed25519_github.pub --title "my-windows-machine"
+
+# Test connection
+ssh -T git@github.com
+```
+
+`~/.ssh/config` entry:
+```
+Host github.com
+  IdentityFile ~/.ssh/id_ed25519_github
+  User git
+```
+
 ## Out of Scope
 
 <!-- Anything Claude should NOT do or change in this codebase -->
