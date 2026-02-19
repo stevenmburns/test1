@@ -10,7 +10,7 @@ Very simple test of Claude's ability to write python scripts.
 - Python:
 - setuptools:
 - pip:
-- sqllite:
+- sqlite3:
 - pytest:
 
 ## Project Structure

@@ -1,14 +1,3 @@
-import pytest
-from db import KeyValueStore
-
-
-@pytest.fixture
-def store():
-    kv = KeyValueStore()
-    yield kv
-    kv.close()
-
-
 def test_set_and_get(store):
     store.set("foo", "bar")
     assert store.get("foo") == "bar"
